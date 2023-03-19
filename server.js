@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const db = require('./Config/db');
 const userRoutes = require('./Routes/userRoutes');
 
 // Parse incoming requests with JSON payloads
