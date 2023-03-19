@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/SamuelSau/SparkConvo/issues"
   },
-  "homepage": "https://github.com/SamuelSau/SparkConvo#readme"
+  "homepage": "https://github.com/SamuelSau/SparkConvo#readme",
+  "dependencies": {
+    "mongoose": "^7.0.2"
+  }
 }
