@@ -14,6 +14,10 @@ exports.getAllUsers = async (req, res) => {
 
 // GET /api/users/:id - Returns information about a specific user
 exports.getUserById = async (req, res) => {
+  const validId = /^[0-9a-fA-F]{24}$/; // Regular expression to check for valid ObjectId
+  if (!validId.test(req.params.id)) {
+    return res.status(404).json({ message: 'User not found' });
+  }
   try {
     const user = await User.findById(req.params.id);
     if (!user) {
